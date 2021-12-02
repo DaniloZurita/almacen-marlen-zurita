@@ -1,6 +1,6 @@
 /*Todavia no tengo las imagenes originales, son ilustrativas*/
 
-html, body {
+ html, body {
     margin: 0;
     padding: 0;
 }
@@ -10,33 +10,10 @@ body{
     user-select: none;
 }
 
-.head {
- display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 60% 15% auto; 
-  gap: 1px 1px; 
-  grid-template-areas: 
-    "Logo Logo"
-    "nav nav"
-    "titu titu"; 
-    align-content: space-evenly; 
-    width: 100%;
-}
-.fotosMain {
-    display: flex;
-    justify-content: space-around;
-}
+
 .imgLogo {
     width: 100%;
 }
-
-.Logo { grid-area: Logo; }
-.nav { grid-area: nav; }
-.titu { 
-    grid-area: titu; 
-}
-.img1 { grid-area: img1; }
-.img2 { grid-area: img2; }
 
 body{
     background-color: orange;
@@ -51,47 +28,10 @@ text-align: center;
 margin-bottom: 0;
 }
 
-
-
-.barraNav{
-    display: inline-block;
-    display: flex;
-    list-style-type: none;
-    padding: 20px;
-    margin: 0px;}
-
-.barraNav li{
-    padding: 40px;
-    font-size: 30px;
-    font-style: oblique;
-    text-align: center;
-
 }
 
-.paralax{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-
-    height: 550px;
-    width: 500px;
-
-}
-
-.img2{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-
-    height: 550px;
-    width: 500px;
-
-
-}
-
-.contacto--titulo{
+.contaTitu{
+    
     font-size: 38px;
     color: black;
     padding: 20px;
@@ -99,39 +39,6 @@ margin-bottom: 0;
     background-position: center;
     
 }
-.contactoFlex {
-    display: flex;
-    justify-content: space-around;
-
-}
-form {
-    border: solid 2px black;
-    border-radius: 20px;
-    padding: 15px;
-}
-input {
-    padding: 20px;
-    margin: 20px;
-}
-
-.icono--redes{
-  
-
-    float: none;
-    display: block;
-    list-style-type: none;
-    padding: 50PX;
-    margin: 5px;
-}
-
-.div--presentacion{
-    background-color: rgba(255, 18, 18, 0.14);
-    display: flex;
-    margin: 20px 5;
-    width: 70%;
-    font-size: 20px;
-    font-style: oblique;
-  }
 
 .nosotros{
 
@@ -140,18 +47,7 @@ input {
     background-color: rgba(181, 149, 144, 0.9);
     border-radius: 20px;
     font-weight: bold;
-}
-.nosotrosFlex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.ubiFlex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .ubi--titu{
@@ -160,6 +56,7 @@ input {
     background-color: rgba(181, 149, 144, 0.9);
     border-radius: 20px;
     font-weight: bold;
+    text-align: center;
   }
 
 .productoTitu{
@@ -168,49 +65,19 @@ input {
     background-color: rgba(181, 149, 144, 0.9);
     border-radius: 20px;
     font-weight: bold;
+    text-align: center;
    }
-.productoMain {
-    margin: 10px;
-}
 
 a {
     text-decoration: none;
-    color: black;
-
 }
 
-nav a:hover {
-    border: solid black 2px;
+form {
+    border: solid 2px black;
     border-radius: 20px;
-    padding: 5px;
+    padding: 10px;
 }
-
-.img1 {
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-
-}
-
-@media only screen and (min-width: 0px) and (max-width: 768px){
-
-.barraNav{
-    flex-wrap: wrap;
-    position:  relative;
-    top:  -200px;
-
-
-}
-
+input {
+    padding: 10px;
+    margin: 10px;
 }
