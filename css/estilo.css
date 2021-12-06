@@ -81,3 +81,30 @@ input {
     padding: 10px;
     margin: 10px;
 }
+
+.textProd{
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(212,152,13,1) 100%);
+}
+
+.imgUb {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .videoNos iframe{ width: 300px; height: 300px;
+    }
+    }
