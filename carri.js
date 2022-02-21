@@ -2,6 +2,10 @@
 let clickear = document.getElementById("compra1")
       clickear.addEventListener("click", comprar)
 
+const usuario2 = null
+
+
+console.log (usuario2?.nombre || "El usuario2 no existe")
 
 
 function comprar () {
@@ -11,7 +15,7 @@ function comprar () {
     conficompra.innerHTML = "<h2> Muchas Gracias Por Su compra</h2>" + usuario1;
     document.body.appendChild(comprado);
 
-console.log(usuario1);
+console.log( usuario1 || "El usuario no existe");
 }
 let usuario1 = document.getElementById("nombre").value;
 
@@ -38,3 +42,23 @@ function recuperar() {
 let recuperarLS = JSON.parse(localStorage.getItem('usuario'))}
 
 recuperar();
+
+console.log( 'usuario' ?? Nullish );
+
+const usuario3 = {
+    mail: "notiene@gmail.com",
+    direccion: "Avenida siempre viva 1234"
+}
+
+const { mail , direccion } = usuario3
+console.log (mail);
+
+const {
+    mail: correo,
+    direccion: lugar
+} = usuario3
+
+console.log (correo);
+
+const usuarios = ["usuario1", "usuario2", "usuario3", "usuario4" ]
+console.log(...usuarios);
