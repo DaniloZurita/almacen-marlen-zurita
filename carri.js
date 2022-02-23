@@ -11,9 +11,20 @@ console.log (usuario2?.nombre || "El usuario2 no existe")
 function comprar () {
     let conficompra = document.getElementById("comprado");
     let usuario1 = document.getElementById("nombre").value;
-    let nombre2 = document.createElement("p")
-    conficompra.innerHTML = "<h2> Muchas Gracias Por Su compra</h2>" + usuario1;
-    document.body.appendChild(comprado);
+   Toastify({
+  text: "Gracias Por Su Compra " +usuario1 ,
+  duration: 2000,
+  destination: "https://github.com/apvarun/toastify-js",
+  newWindow: true,
+  close: true,
+  gravity: "top", // `top` or `bottom`
+  position: "left", // `left`, `center` or `right`
+  stopOnFocus: true, // Prevents dismissing of toast on hover
+  style: {
+    background: "linear-gradient(to right, #00b09b, #96c93d)",
+  },
+  onClick: function(){} // Callback after click
+}).showToast();
 
 console.log( usuario1 || "El usuario no existe");
 }
@@ -22,8 +33,24 @@ let usuario1 = document.getElementById("nombre").value;
 let clickear1 = document.getElementById("limpiar1")
     clickear1.addEventListener("click", limpiar)
 
+
     function limpiar () {
-        console.log("No compraron nada")
+          swal({
+  title: "Estas seguro??",
+  text: "Se borraran todas tus compras!",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+})
+.then((willDelete) => {
+  if (willDelete) {
+    swal("Tus compras han sido eliminadas", {
+      icon: "success",
+    });
+  } else {
+    swal("Tu Compra esta a salvo!");
+  }
+});
 
 
     }
